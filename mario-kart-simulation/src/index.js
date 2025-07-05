@@ -21,5 +21,9 @@ async function rollDice(){
 
 (async function main() {
     console.log(`${player1.name} e ${player2.name} começaram uma corrida...`)
+
+    for(let i = 1;i <= 5;i++){
+        
+    }
 })()
 
