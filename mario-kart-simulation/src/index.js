@@ -19,11 +19,11 @@ async function rollDice(){
     return Math.floor(Math.random() * 6) + 1;
 }
 
+async function playRaceEngine(character1, character2) {}
+
 (async function main() {
     console.log(`${player1.name} e ${player2.name} começaram uma corrida...`)
 
-    for(let i = 1;i <= 5;i++){
-        
-    }
+    await playRaceEngine(player1, player2)
 })()
 
