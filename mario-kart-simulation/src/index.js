@@ -20,6 +20,6 @@ async function rollDice(){
 }
 
 (async function main() {
-    console.log('Hello world')
+    console.log(`${player1.name} e ${player2.name} começaram uma corrida...`)
 })()
 
