@@ -45,6 +45,23 @@ async function playRaceEngine(character1, character2) {
          
         let block = await getRandomBlock();
         console.log(`Bloco: ${block}`);
+
+        let diceRoll1 = await rollDice();
+        let diceRoll2 = await rollDice();
+
+        let totalSkill1 = 0;
+        let totalSkill2 = 0;
+
+        if(block == 'RETA'){
+            totalSkill1 = diceRoll1 + player1.speed;
+            totalSkill2 = diceRoll2 + player2.speed;
+        }else if(block == 'CURVA'){
+            totalSkill1 = diceRoll1 + player1.maneuverability;
+            totalSkill2 = diceRoll2 + player2.maneuverability;
+        }else{
+            totalSkill1 = diceRoll1 + player1.power;
+            totalSkill2 = diceRoll2 + player2.power
+        }
     }
 
 }
