@@ -22,7 +22,7 @@ async function rollDice(){
 async function playRaceEngine(character1, character2) {}
 
 (async function main() {
-    console.log(`${player1.name} e ${player2.name} começaram uma corrida...`)
+    console.log(`🏁 🏎️  ${player1.name} e ${player2.name} começaram uma corrida...\n `)
 
     await playRaceEngine(player1, player2)
 })()
