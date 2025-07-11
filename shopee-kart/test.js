@@ -6,8 +6,10 @@ const cart = [
         name: 'Guitarra'
     }
 ]
-const item1 ={
-    name: 'Violão'
-}
 
-console.log(cart.findIndex((i) => i.name === 'Violão'))
+
+cart.forEach((item, index, i) => {
+    console.log(item)
+    console.log(index)
+    console.log(i)
+})
