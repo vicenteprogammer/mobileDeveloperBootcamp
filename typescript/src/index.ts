@@ -1,4 +1,4 @@
-function main(){
+function man(){
     let email:string = 'test@gmail.com'
     console.log(email)
 }
