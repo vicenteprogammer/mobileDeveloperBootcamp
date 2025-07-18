@@ -1,1 +1,6 @@
-console.log('Olá, tudo certo por aqui')
+import { sendEmail } from "./services/email";
+
+
+const message = sendEmail('Money')
+
+console.log(message)
