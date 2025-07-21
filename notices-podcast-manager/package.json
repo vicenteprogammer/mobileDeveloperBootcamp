@@ -1,0 +1,17 @@
+{
+  "name": "notices-podcast-manager",
+  "version": "1.0.0",
+  "description": "Uma api que gerencia os principais podcast de notícias.",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx src/index.ts",
+    "start:build": "tsup src/index.ts"
+  },
+  "author": "Vicente Junior",
+  "license": "ISC",
+  "dependencies": {
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  }
+}
