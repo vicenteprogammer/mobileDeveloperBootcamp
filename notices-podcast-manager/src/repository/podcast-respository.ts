@@ -5,8 +5,12 @@ import { Podcast } from '../models/podcast-model';
 const dirpath = path.join(__dirname,"../repository/podcasts.json");
 
 
-export const repositoryPodcast = async ():Promise<Podcast> =>{
+export const repositoryPodcast = async (canal?:string):Promise<Podcast[]> =>{
     const rawData = fs.readFileSync(dirpath,'utf-8');
-    const jsonFile = JSON.parse(rawData)
+    let jsonFile = JSON.parse(rawData)
+
+    if(canal){
+        jsonFile = jsonFile.filter((podcast:Podcast)=> podcast.canal === canal )
+    }
     return jsonFile;
 }
