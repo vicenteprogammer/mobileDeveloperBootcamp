@@ -9,7 +9,8 @@ export const getListEpisodes = async (req:IncomingMessage, res:ServerResponse)=>
 }
 
 export const filterPod  = async(req:IncomingMessage,res:ServerResponse)=>{
-  const content = await filterPodcasts('TechBR')
+  
+  const content = await filterPodcasts(req.url)
   res.writeHead(200, {"Content-Type":"application/json"})
   res.end(JSON.stringify(content))
 }
