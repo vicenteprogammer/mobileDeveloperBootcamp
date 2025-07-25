@@ -6,13 +6,13 @@ import { ContentType } from '../utils/content-type';
 
 export const getListEpisodes = async (req:IncomingMessage, res:ServerResponse)=>{
     const content = await serviceListEpisodes()
-    res.writeHead(StatusCode.OK,{"Content-Type":ContentType.JSON});
-    res.end(JSON.stringify(content))
+    res.writeHead(content.statusCode,{"Content-Type":ContentType.JSON});
+    res.end(JSON.stringify(content.body))
 }
 
 export const filterPod  = async(req:IncomingMessage,res:ServerResponse)=>{
   
   const content = await filterPodcasts(req.url)
-  res.writeHead(StatusCode.OK, {"Content-Type":"application/json"})
-  res.end(JSON.stringify(content))
+  res.writeHead(content.statusCode, {"Content-Type":"application/json"})
+  res.end(JSON.stringify(content.body))
 }
