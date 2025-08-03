@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View , Image, TextInput} from 'react-native';
+import alien from './assets/alien.png'
 
 export default function App() {
   return (
@@ -22,6 +23,17 @@ export default function App() {
       {/*Podemos deixar um texto selecionável, através dessa propriedade que o o Text tem. */}
       <Text selectable={true}>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+
+
+
+      {/*Utilizando imagens*/}
+      <Image source={alien} />
+
+      {/*TextInput -> Componente que é usado para recebermos textos e ele tem propiedades bem interessantes como o onChange e o keyBoardType */}
+      <TextInput style={styles.input} onChange={(e)=>console.log( e.nativeEvent.text)} />
+      {/*Podemos recuprar um valor que está sendo digitado através do onChange e pergar o que está acontecendo com ele. */}
+
+
     </View>
   );
 }
@@ -41,5 +53,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom:20
+  },
+  input:{
+    width: 150,
+    height: 30,
+    backgroundColor: 'red'
   }
 });
