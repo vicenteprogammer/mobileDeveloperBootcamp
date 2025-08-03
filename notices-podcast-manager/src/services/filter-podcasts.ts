@@ -1,4 +1,3 @@
-import { log } from "console";
 import { repositoryPodcast } from "../repository/podcast-respository"
 import { FilterPocast } from "../models/filter-podcast";
 import { StatusCode } from "../utils/status-code";
