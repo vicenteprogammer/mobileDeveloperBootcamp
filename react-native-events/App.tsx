@@ -15,7 +15,11 @@ export default function App() {
 
       {/*onPressOut é o evento que é executado por último assim quando o usúario deixa de pressiona ele é e executado */}
 
-      <Text onPressOut={()=>{'Sou o último a ser executado'}} onPress={greet} onPressIn={()=> console.log('Eu executo primeiro')}> Press Here</Text>
+      {/*longPress é o evento que é executado quando o usúario fica pressionando o botão, como o próprio nome já diz. */}
+
+      {/*onTextLayout é o evento que é disparado quando o texto é renderizado no layput, muito usado em esperas de respostas de api. */}
+
+      <Text onLongPress={()=> console.log('Me pressionou demais eu executo...')} onPressOut={()=>{'Sou o último a ser executado'}} onPress={greet} onPressIn={()=> console.log('Eu executo primeiro')}> Press Here</Text>
       <StatusBar style="auto" />
     </View>
   );
