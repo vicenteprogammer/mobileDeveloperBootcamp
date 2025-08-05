@@ -1,6 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
+function BoxRed(){
+   return(
+    <View style={{backgroundColor:'red'}}></View>
+   )
+   
+  }
+
+
 export default function App() {
 
   //Aprendendo como funciona os stilos no React Native...
@@ -15,8 +23,13 @@ export default function App() {
   flexDirection -> Defini como os elementos vão ser dipostos na tela, horizontalmente, verticalmente, entre outros tipos, por padrão no react native o flex direction é Column.
    */
 
+
+
+
   return (
+    
     <View style={styles.container}>
+      <BoxRed/>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
