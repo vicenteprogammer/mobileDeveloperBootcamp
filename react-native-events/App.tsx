@@ -11,7 +11,11 @@ export default function App() {
       <Text style={{marginBottom: 30}} >Open up App.tsx to start working on your app!</Text>
       {/*onPress é um dos principais eventos que compõem vários componentes de react native, muito usado em botões e alguns textos específicos, nesse evento podemos passar funções e paramêtros para a função que será executado, assim como no javascript */}
 
-      <Button title='Greeting' onPress={greet}/>
+      {/** onPressIn é o evento que é executado antrs do evento de pressionar, geralmente usado para fazer alguma verificção antes do usúario clicar, levando em conta que isso acontec em milisegundos. */}
+
+      {/*onPressOut é o evento que é executado por último assim quando o usúario deixa de pressiona ele é e executado */}
+
+      <Text onPressOut={()=>{'Sou o último a ser executado'}} onPress={greet} onPressIn={()=> console.log('Eu executo primeiro')}> Press Here</Text>
       <StatusBar style="auto" />
     </View>
   );
