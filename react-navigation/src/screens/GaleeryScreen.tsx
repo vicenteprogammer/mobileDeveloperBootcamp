@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 
 
-export default function GelleryScreen(){
+export default function GalleryScreen(){
     return(
         <View style={styles.container}>
             <Text>Gallery Screen Works</Text>
