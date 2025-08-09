@@ -1,11 +1,17 @@
 import React from "react";
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet ,Button} from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-export default function HomeScreen (){
+export default function HomeScreen ({navigation}: any){
+
+  const changeScreen = () =>{
+    navigation.navigate('gallery')
+
+  }
     return(
         <View style={styles.container}>
             <Text>Home Screen Works</Text>
             <StatusBar style="auto" />
+            <Button onPress={changeScreen} title="Go gallery"></Button>
         </View>
     )
 }
