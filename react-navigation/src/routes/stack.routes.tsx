@@ -11,6 +11,9 @@ export default function StackRoutes(){
             <Screen
              name='home'
              component={HomeScreen}
+             options={{
+                title: 'Home Screen',
+             }}
             />
 
             <Screen
